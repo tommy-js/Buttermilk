@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 export const GoButton: React.FC = () => {
   return (
     <div className={styles.go_button}>
-      <Link href="/home">
+      <Link href="/stories">
         <a className={styles.go}>Go!</a>
       </Link>
     </div>
