@@ -1,0 +1,12 @@
+@import "../../globals/variables.scss";
+
+.log_in {
+  float: right;
+  margin-right: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.log_in:hover {
+  color: $red;
+}

@@ -1,0 +1,11 @@
+@import "../../globals/variables.scss";
+
+.navbar_link {
+  margin-left: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar_link:hover {
+  color: $red;
+}

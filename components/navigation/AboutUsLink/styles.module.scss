@@ -1,0 +1,11 @@
+@import "../../globals/variables.scss";
+
+.about_us_link {
+  margin-left: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.about_us_link:hover {
+  color: $red;
+}

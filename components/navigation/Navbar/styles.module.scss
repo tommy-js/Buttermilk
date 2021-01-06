@@ -1,0 +1,9 @@
+@import "../../globals/variables.scss";
+
+.navbar {
+  position: fixed;
+  height: 40px;
+  top: 0;
+  width: 100vw;
+  background-color: $white;
+}
