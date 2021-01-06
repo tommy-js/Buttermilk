@@ -5,7 +5,7 @@ export default function Guides() {
   return (
     <div>
       <Navbar />
-      <Home />
+      <GuidePage />
     </div>
   );
 }

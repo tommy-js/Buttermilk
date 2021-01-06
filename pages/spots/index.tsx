@@ -5,7 +5,7 @@ export default function Spots() {
   return (
     <div>
       <Navbar />
-      <Home />
+      <SpotsPage />
     </div>
   );
 }
