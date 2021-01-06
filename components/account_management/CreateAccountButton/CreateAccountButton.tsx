@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 
-export const LogIn: React.FC = () => {
+export const CreateAccountButton: React.FC = () => {
   return (
-    <Link href="/login">
-      <a className={styles.log_in}>Log In</a>
+    <Link href="/create_account">
+      <a>Create Account</a>
     </Link>
   );
 };
