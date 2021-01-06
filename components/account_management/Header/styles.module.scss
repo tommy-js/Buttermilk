@@ -1,9 +1,20 @@
 @import "../../globals/variables.scss";
 
 .header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  text-align: center;
+  @include noselect;
+}
+
+.text {
   color: $yellow;
   text-shadow: 2px 2px $red;
   font-size: 50px;
-  text-align: center;
-  margin-top: 50px;
+}
+
+.text:hover {
+  text-decoration: underline 2px solid $yellow;
+  cursor: pointer;
 }
