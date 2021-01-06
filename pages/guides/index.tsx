@@ -1,5 +1,5 @@
-import { Home } from "../../components/home/Home/Home";
 import { Navbar } from "../../components/navigation/Navbar/Navbar";
+import { GuidePage } from "../../components/guides/GuidePage/GuidePage";
 
 export default function Guides() {
   return (

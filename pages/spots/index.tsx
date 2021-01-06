@@ -1,5 +1,5 @@
-import { Home } from "../../components/home/Home/Home";
 import { Navbar } from "../../components/navigation/Navbar/Navbar";
+import { SpotsPage } from "../../components/spots/SpotsPage/SpotsPage";
 
 export default function Spots() {
   return (
