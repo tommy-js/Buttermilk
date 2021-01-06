@@ -1,0 +1,25 @@
+@import "../../globals/variables.scss";
+
+.go_button {
+  position: absolute;
+  bottom: 40%;
+  width: 100%;
+}
+
+.go {
+  position: relative;
+  display: block;
+  width: 125px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $red;
+  color: $white;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid $yellow;
+}
+
+.go:hover {
+  background-color: $black;
+}
