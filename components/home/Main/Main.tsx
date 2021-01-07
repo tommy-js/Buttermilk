@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Filter } from "../Filter/Filter";
 import { Feed } from "../Feed/Feed";
 import styles from "./styles.module.scss";
