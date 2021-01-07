@@ -2,6 +2,9 @@ import React from "react";
 import { FeedItem } from "../feed_item/FeedItem/FeedItem";
 import styles from "./styles.module.scss";
 const testimg = require("../../../public/test_img.jpg");
+const testimg2 = require("../../../public/test_img_2.jpg");
+const testimg3 = require("../../../public/test_img_3.jpg");
+const testimg4 = require("../../../public/test_img_4.jpg");
 
 export const Feed: React.FC = () => {
   const test = [
@@ -10,7 +13,7 @@ export const Feed: React.FC = () => {
       title: "Test 1",
       subtitle: "subtitle 1",
       timestamp: 1609972233,
-      imgUrl: testimg,
+      imgUrl: testimg4,
       stars: 0,
     },
     {
@@ -26,7 +29,7 @@ export const Feed: React.FC = () => {
       title: "Test 3",
       subtitle: "subtitle 3",
       timestamp: 1609972341,
-      imgUrl: testimg,
+      imgUrl: testimg2,
       stars: 8,
     },
     {
@@ -34,7 +37,7 @@ export const Feed: React.FC = () => {
       title: "Test 4",
       subtitle: "subtitle 4",
       timestamp: 1609972346,
-      imgUrl: testimg,
+      imgUrl: testimg2,
       stars: 8,
     },
     {
@@ -42,7 +45,7 @@ export const Feed: React.FC = () => {
       title: "Test 5",
       subtitle: "subtitle 5",
       timestamp: 1609972352,
-      imgUrl: testimg,
+      imgUrl: testimg4,
       stars: 2,
     },
     {
@@ -50,7 +53,7 @@ export const Feed: React.FC = () => {
       title: "Test 6",
       subtitle: "subtitle 6",
       timestamp: 1609972012,
-      imgUrl: testimg,
+      imgUrl: testimg2,
       stars: 64,
     },
     {
@@ -58,7 +61,7 @@ export const Feed: React.FC = () => {
       title: "Test 7",
       subtitle: "subtitle 7",
       timestamp: 1609972365,
-      imgUrl: testimg,
+      imgUrl: testimg3,
       stars: 822,
     },
     {
@@ -74,7 +77,7 @@ export const Feed: React.FC = () => {
       title: "Test 9",
       subtitle: "subtitle 9",
       timestamp: 1609972384,
-      imgUrl: testimg,
+      imgUrl: testimg4,
       stars: 7,
     },
   ];

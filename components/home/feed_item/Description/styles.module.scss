@@ -1,0 +1,28 @@
+@import "../../../globals/variables.scss";
+
+.outer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  background-color: $white;
+  top: 100px;
+}
+
+.inner {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  margin-left: 5px;
+  @include noselect;
+}
+
+.title {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-top: 0;
+}

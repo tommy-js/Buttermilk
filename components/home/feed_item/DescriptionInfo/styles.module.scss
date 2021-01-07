@@ -1,0 +1,25 @@
+.description_info {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 24px;
+  box-sizing: border-box;
+}
+
+.stars {
+  top: 0;
+  font-size: 14px;
+  margin-left: 2px;
+  display: inline-block;
+}
+
+.star_image_block {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+}
+
+.star_image {
+  width: 100%;
+  height: 100%;
+}

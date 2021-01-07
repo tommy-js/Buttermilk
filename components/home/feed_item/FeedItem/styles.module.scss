@@ -1,10 +1,11 @@
+@import "../../../globals/variables.scss";
+
 .feed_item {
   position: relative;
   display: inline-block;
   height: 225px;
   width: percentage(1/3);
   box-sizing: border-box;
-  border: 1px solid black;
   padding: 5px;
 }
 
@@ -13,6 +14,8 @@
   height: 90%;
   width: 90%;
   margin: 5%;
-  border: 1px solid red;
+  border: 1px solid $red;
   border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
 }
