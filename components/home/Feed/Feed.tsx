@@ -92,6 +92,7 @@ export const Feed: React.FC = () => {
           timestamp={el.timestamp}
           imgUrl={el.imgUrl}
           stars={el.stars}
+          key={el.id}
         />
       ))}
     </div>
