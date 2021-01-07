@@ -11,8 +11,8 @@ interface Props {
 export const Description: React.FC<Props> = (props) => {
   return (
     <div className={styles.description}>
-      <p>{props.title}</p>
-      <p>{props.subtitle}</p>
+      <p className={styles.title}>{props.title}</p>
+      <p className={styles.subtitle}>{props.subtitle}</p>
       <DescriptionInfo stars={props.stars} />
     </div>
   );
