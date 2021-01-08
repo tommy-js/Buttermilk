@@ -9,6 +9,7 @@ export default function Story() {
   const test = {
     title: "Testing Bouldering Title",
     username: "TommyBoy",
+    userId: "88dae9d4-7326-4b5a-a277-78af1f1e5ab5",
     timestamp: 1610118395,
     imgUrl: require("../../public/test_img.jpg"),
     stars: 4,
@@ -35,6 +36,7 @@ export default function Story() {
       <StoryPage
         title={test.title}
         username={test.username}
+        userId={test.userId}
         timestamp={test.timestamp}
         stars={test.stars}
         imgUrl={test.imgUrl}

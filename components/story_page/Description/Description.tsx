@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const emptyStar = require("../../../public/star_empty.png");
@@ -7,6 +8,7 @@ const star = require("../../../public/star.png");
 interface Props {
   title: string;
   username: string;
+  userId: string;
   stars: number;
   timestamp: number;
 }
@@ -42,7 +44,9 @@ export const Description: React.FC<Props> = (props) => {
         <p className={styles.title}>{props.title}</p>
       </div>
       <div className={styles.lowerblock}>
-        <p className={styles.username}>{props.username}</p>
+        <Link href={`/user/${props.userId}`}>
+          <a className={styles.username}>{props.username}</a>
+        </Link>
         <p className={styles.stars}>{totalStars}</p>
         <div className={styles.img_block} onClick={() => returnStar()}>
           <img className={styles.img} src={starImg} />
