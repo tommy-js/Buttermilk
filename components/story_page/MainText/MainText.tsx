@@ -1,4 +1,5 @@
 import React from "react";
+import { TextBlock } from "../TextBlock/TextBlock";
 import styles from "./styles.module.scss";
 
 interface Text {
@@ -14,7 +15,7 @@ export const MainText: React.FC<Props> = (props) => {
   return (
     <div>
       {props.text.map((el: any) => (
-        <p>{el.text}</p>
+        <TextBlock text={el.text} id={el.id} key={el.id} />
       ))}
     </div>
   );

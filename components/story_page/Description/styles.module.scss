@@ -1,0 +1,43 @@
+@import "../../globals/variables.scss";
+
+.description {
+  position: relative;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  // @include testing;
+}
+
+.title {
+  font-size: 22px;
+  margin-left: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.lowerblock {
+  border-bottom: 1px dashed grey;
+}
+
+.stars,
+.timestamp,
+.username {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.img_block {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./styles.module.scss";
 
-const test = require("../../../public/test_img.jpg");
+interface Props {
+  imgUrl: string;
+}
 
-export const Image: React.FC = () => {
+export const Image: React.FC<Props> = (props) => {
   return (
     <div className={styles.image_container}>
-      <img className={styles.image} src={test} />
+      <img className={styles.image} src={props.imgUrl} />
     </div>
   );
 };

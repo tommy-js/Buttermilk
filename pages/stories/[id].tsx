@@ -10,6 +10,7 @@ export default function Story() {
     title: "Testing Bouldering Title",
     username: "TommyBoy",
     timestamp: 1610118395,
+    imgUrl: require("../../public/test_img.jpg"),
     stars: 4,
     text: [
       {
@@ -36,6 +37,7 @@ export default function Story() {
         username={test.username}
         timestamp={test.timestamp}
         stars={test.stars}
+        imgUrl={test.imgUrl}
         text={test.text}
       />
     </div>

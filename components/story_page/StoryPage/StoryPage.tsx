@@ -14,13 +14,14 @@ interface Props {
   username: string;
   timestamp: number;
   stars: number;
+  imgUrl: string;
   text: Text[];
 }
 
 export const StoryPage: React.FC<Props> = (props) => {
   return (
     <div className={styles.story_page}>
-      <Image />
+      <Image imgUrl={props.imgUrl} />
       <Description
         title={props.title}
         username={props.username}
