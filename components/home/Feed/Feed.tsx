@@ -8,78 +8,80 @@ const testimg4 = require("../../../public/test_img_4.jpg");
 
 interface Props {
   selected: any;
+  searchQuery: string;
+  searching: boolean;
 }
 
 export const Feed: React.FC<Props> = (props) => {
   const test = [
     {
       id: 0,
-      title: "Test 1",
-      subtitle: "subtitle 1",
+      title: "Bouldering in the snow",
+      username: "James",
       timestamp: 1609972233,
       imgUrl: testimg4,
       stars: 0,
     },
     {
       id: 1,
-      title: "Test 2",
-      subtitle: "subtitle 2",
+      title: "Skiing for noobs",
+      username: "J22A",
       timestamp: 1609972261,
       imgUrl: testimg,
       stars: 3,
     },
     {
       id: 2,
-      title: "Test 3",
-      subtitle: "subtitle 3",
+      title: "Caving at its best",
+      username: "Tommy",
       timestamp: 1609972341,
       imgUrl: testimg2,
       stars: 8,
     },
     {
       id: 3,
-      title: "Test 4",
-      subtitle: "subtitle 4",
+      title: "Stepping into the unknown",
+      username: "Mac",
       timestamp: 1609972346,
       imgUrl: testimg2,
       stars: 8,
     },
     {
       id: 4,
-      title: "Test 5",
-      subtitle: "subtitle 5",
+      title: "Bouldering in the Gunks",
+      username: "Max",
       timestamp: 1609972352,
       imgUrl: testimg4,
       stars: 2,
     },
     {
       id: 5,
-      title: "Test 6",
-      subtitle: "subtitle 6",
+      title: "Hiking the Appalacian Trail",
+      username: "Karen",
       timestamp: 1609972012,
       imgUrl: testimg2,
       stars: 64,
     },
     {
       id: 6,
-      title: "Test 7",
-      subtitle: "subtitle 7",
+      title: "Mountaineering",
+      username: "Jord",
       timestamp: 1609972365,
       imgUrl: testimg3,
       stars: 822,
     },
     {
       id: 7,
-      title: "Test 8",
-      subtitle: "subtitle 8",
+      title: "Trees",
+      username: "44ew",
       timestamp: 1609971245,
       imgUrl: testimg,
       stars: 83,
     },
     {
       id: 8,
-      title: "Test 9",
-      subtitle: "subtitle 9",
+      title: "Something else",
+      username: "Tommy",
       timestamp: 1609972384,
       imgUrl: testimg4,
       stars: 7,
@@ -88,18 +90,14 @@ export const Feed: React.FC<Props> = (props) => {
   const [array, setArray] = useState(test);
 
   useEffect(() => {
-    console.log(test);
-  }, [test]);
-
-  useEffect(() => {
     if (props.selected.recent === true) {
-      let arr = [...array];
+      let arr = [...test];
       arr.sort(function (a, b) {
         return a.timestamp - b.timestamp;
       });
       setArray(arr);
     } else if (props.selected.stars === true) {
-      let arr = [...array];
+      let arr = [...test];
       arr.sort(function (a, b) {
         return b.stars - a.stars;
       });
@@ -107,13 +105,31 @@ export const Feed: React.FC<Props> = (props) => {
     }
   }, [props.selected]);
 
+  useEffect(() => {
+    if (props.searching === true) {
+      let original = [...test];
+      let updated = [];
+      let queryLowercased = props.searchQuery.toLowerCase();
+      for (let i = 0; i < original.length; i++) {
+        let lowerCasedTitle = original[i].title.toLowerCase();
+        let lowerCasedUsername = original[i].username.toLowerCase();
+        if (lowerCasedTitle.includes(queryLowercased)) {
+          updated.push(original[i]);
+        } else if (lowerCasedUsername.includes(queryLowercased)) {
+          updated.push(original[i]);
+        }
+      }
+      setArray(updated);
+    }
+  }, [props.searchQuery]);
+
   return (
     <div className={styles.feed}>
       {array.map((el: any) => (
         <FeedItem
           id={el.id}
           title={el.title}
-          subtitle={el.subtitle}
+          username={el.username}
           timestamp={el.timestamp}
           imgUrl={el.imgUrl}
           stars={el.stars}

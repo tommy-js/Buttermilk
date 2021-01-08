@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 interface Props {
   title: string;
-  subtitle: string;
+  username: string;
   stars: number;
 }
 
@@ -14,7 +14,7 @@ export const Description: React.FC<Props> = (props) => {
       <div className={styles.outer} />
       <div className={styles.inner}>
         <h3 className={styles.title}>{props.title}</h3>
-        <p className={styles.subtitle}>{props.subtitle}</p>
+        <p className={styles.subtitle}>{props.username}</p>
         <DescriptionInfo stars={props.stars} />
       </div>
     </div>

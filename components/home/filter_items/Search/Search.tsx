@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 
-export const Search: React.FC = () => {
+interface Props {
+  query: (input: string) => void;
+}
+
+export const Search: React.FC<Props> = (props) => {
+  const [input, setInput] = useState("");
+
   return (
     <div>
       <span>Search</span>
-      <input type="text" placeholder="search" />
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        type="text"
+        placeholder="search"
+      />
+      <button onClick={() => props.query(input)}>Go</button>
     </div>
   );
 };
