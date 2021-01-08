@@ -15,7 +15,7 @@ export const Search: React.FC<Props> = (props) => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         type="text"
-        placeholder="search"
+        placeholder="Location, grade, name, etc."
       />
       <button onClick={() => props.query(input)}>Go</button>
     </div>

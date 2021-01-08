@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 interface Props {
   id: number;
   title: string;
-  subtitle: string;
+  username: string;
   imgUrl: string;
   stars: number;
 }
@@ -19,7 +19,7 @@ export const FeedItem: React.FC<Props> = (props) => {
         <SpotsLink
           imgUrl={props.imgUrl}
           title={props.title}
-          subtitle={props.subtitle}
+          username={props.username}
           stars={props.stars}
         />
       </Link>
@@ -28,12 +28,12 @@ export const FeedItem: React.FC<Props> = (props) => {
 };
 
 const SpotsLink = React.forwardRef(
-  ({ onClick, href, imgUrl, title, subtitle, stars }, ref) => {
+  ({ onClick, href, imgUrl, title, username, stars }, ref) => {
     return (
       <a href={href} onClick={onClick} ref={ref}>
         <div className={styles.inner}>
           <Image imgUrl={imgUrl} />
-          <Description title={title} subtitle={subtitle} stars={stars} />
+          <Description title={title} username={username} stars={stars} />
         </div>
       </a>
     );
