@@ -3,3 +3,21 @@
 .comment {
   border-bottom: 1px solid $red;
 }
+
+.value {
+  display: inline-block;
+}
+
+.star_img {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
