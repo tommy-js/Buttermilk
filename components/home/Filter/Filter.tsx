@@ -3,11 +3,15 @@ import { Search } from "../filter_items/Search/Search";
 import { SearchListItems } from "../filter_items/SearchListItems/SearchListItems";
 import styles from "./styles.module.scss";
 
-export const Filter: React.FC = () => {
+interface Props {
+  modSelected: (obj: any) => void;
+}
+
+export const Filter: React.FC<Props> = (props) => {
   return (
     <div className={styles.filter}>
       <Search />
-      <SearchListItems />
+      <SearchListItems modSelected={props.modSelected} />
     </div>
   );
 };

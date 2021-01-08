@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FeedItem } from "../feed_item/FeedItem/FeedItem";
 import styles from "./styles.module.scss";
 const testimg = require("../../../public/test_img.jpg");
@@ -6,7 +6,11 @@ const testimg2 = require("../../../public/test_img_2.jpg");
 const testimg3 = require("../../../public/test_img_3.jpg");
 const testimg4 = require("../../../public/test_img_4.jpg");
 
-export const Feed: React.FC = () => {
+interface Props {
+  selected: any;
+}
+
+export const Feed: React.FC<Props> = (props) => {
   const test = [
     {
       id: 0,
@@ -81,10 +85,31 @@ export const Feed: React.FC = () => {
       stars: 7,
     },
   ];
+  const [array, setArray] = useState(test);
+
+  useEffect(() => {
+    console.log(test);
+  }, [test]);
+
+  useEffect(() => {
+    if (props.selected.recent === true) {
+      let arr = [...array];
+      arr.sort(function (a, b) {
+        return a.timestamp - b.timestamp;
+      });
+      setArray(arr);
+    } else if (props.selected.stars === true) {
+      let arr = [...array];
+      arr.sort(function (a, b) {
+        return b.stars - a.stars;
+      });
+      setArray(arr);
+    }
+  }, [props.selected]);
 
   return (
     <div className={styles.feed}>
-      {test.map((el: any) => (
+      {array.map((el: any) => (
         <FeedItem
           id={el.id}
           title={el.title}
