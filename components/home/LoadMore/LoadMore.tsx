@@ -6,5 +6,9 @@ interface Props {
 }
 
 export const LoadMore: React.FC<Props> = (props) => {
-  return <button onClick={() => props.loadMore()}>Load More</button>;
+  return (
+    <button className={styles.button} onClick={() => props.loadMore()}>
+      Load More
+    </button>
+  );
 };

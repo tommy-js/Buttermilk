@@ -15,3 +15,21 @@ $yellow: #f89d13;
 @mixin testing {
   border: 1px solid red;
 }
+
+@mixin standard_button {
+  font-size: 16px;
+  padding: 5px;
+  width: 120px;
+  margin-bottom: 50px;
+  background-color: $black;
+  color: $white;
+  border: 1px solid $yellow;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+@mixin standard_hover {
+  color: $yellow;
+  background-color: $red;
+  transition: 0.2s;
+}

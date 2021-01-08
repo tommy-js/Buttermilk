@@ -37,5 +37,8 @@ export function loadMoreSet(array: any, original: any) {
   if (len <= orig.length) {
     let arr = orig.splice(0, len);
     return arr;
-  } else return modArr;
+  } else if (len > orig.length) {
+    modArr = orig;
+    return modArr;
+  }
 }

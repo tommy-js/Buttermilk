@@ -529,6 +529,7 @@ export const Feed: React.FC<Props> = (props) => {
   ];
   const [original] = useState([...test]);
   const [array, setArray] = useState(test.splice(0, 15));
+  const [showLoadMore, setShowLoadMore] = useState(true);
 
   useEffect(() => {
     if (props.selected.recent === true) setArray(sortByRecent(array));
@@ -542,12 +543,18 @@ export const Feed: React.FC<Props> = (props) => {
   }, [props.searchQuery]);
 
   useEffect(() => {
-    console.log("array: " + array.length);
-    console.log("original: " + original.length);
+    if (array.length === original.length) setShowLoadMore(false);
+    else setShowLoadMore(true);
   }, [array]);
 
   function loadMore() {
     setArray(loadMoreSet(array, original));
+  }
+
+  function returnLoadButton() {
+    if (showLoadMore === true) {
+      return <LoadMore loadMore={loadMore} />;
+    } else return null;
   }
 
   return (
@@ -563,7 +570,7 @@ export const Feed: React.FC<Props> = (props) => {
           key={el.id}
         />
       ))}
-      <LoadMore loadMore={loadMore} />
+      {returnLoadButton()}
     </div>
   );
 };
