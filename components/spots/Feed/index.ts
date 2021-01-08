@@ -33,7 +33,7 @@ export function updateSearchQuery(array: any, searchQuery: string) {
 export function loadMoreSet(array: any, original: any) {
   let modArr = [...array];
   let orig = [...original];
-  let len = modArr.length + 30;
+  let len = modArr.length + 10;
   if (len <= orig.length) {
     let arr = orig.splice(0, len);
     return arr;

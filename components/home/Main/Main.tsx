@@ -25,6 +25,7 @@ export const Main: React.FC = () => {
         selected={selected}
         searchQuery={searchQuery}
         searching={searching}
+        modSearching={() => setSearching(false)}
       />
     </div>
   );

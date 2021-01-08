@@ -18,6 +18,7 @@ interface Props {
   selected: any;
   searchQuery: string;
   searching: boolean;
+  modSearching: () => void;
 }
 
 export const Feed: React.FC<Props> = (props) => {
@@ -528,7 +529,8 @@ export const Feed: React.FC<Props> = (props) => {
     },
   ];
   const [original] = useState([...test]);
-  const [array, setArray] = useState(test.splice(0, 30));
+  const [pairedDown, setPairedDown] = useState([...test]);
+  const [array, setArray] = useState(test.splice(0, 10));
   const [showLoadMore, setShowLoadMore] = useState(true);
 
   useEffect(() => {
@@ -538,21 +540,28 @@ export const Feed: React.FC<Props> = (props) => {
 
   useEffect(() => {
     if (props.searching === true) {
-      setArray(updateSearchQuery(array, props.searchQuery));
+      let searched = updateSearchQuery(original, props.searchQuery);
+      if (searched.length > 10) {
+        let spliced = searched.splice(0, 10);
+        setPairedDown(searched);
+        setArray(spliced);
+        props.modSearching();
+        setShowLoadMore(true);
+      } else setArray(searched);
     }
   }, [props.searchQuery]);
 
   useEffect(() => {
-    if (array.length === original.length) setShowLoadMore(false);
+    if (array.length === pairedDown.length) setShowLoadMore(false);
     else setShowLoadMore(true);
   }, [array]);
 
   function loadMore() {
-    setArray(loadMoreSet(array, original));
+    setArray(loadMoreSet(array, pairedDown));
   }
 
   function returnLoadButton() {
-    if (showLoadMore === true) {
+    if (showLoadMore === true && props.searching === false) {
       return <LoadMore loadMore={loadMore} />;
     } else return null;
   }
@@ -564,8 +573,8 @@ export const Feed: React.FC<Props> = (props) => {
           id={el.id}
           title={el.title}
           username={el.username}
-          timestamp={el.timestamp}
           imgUrl={el.imgUrl}
+          timestamp={el.timestamp}
           stars={el.stars}
           key={el.id}
         />

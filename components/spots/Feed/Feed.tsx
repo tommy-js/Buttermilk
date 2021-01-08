@@ -18,6 +18,7 @@ interface Props {
   selected: any;
   searchQuery: string;
   searching: boolean;
+  modSearching: () => void;
 }
 
 export const Feed: React.FC<Props> = (props) => {
@@ -87,91 +88,91 @@ export const Feed: React.FC<Props> = (props) => {
     },
     {
       id: 9,
-      title: "test 8",
+      title: "test 83",
       username: "test username 8",
       imgUrl: test2,
       stars: 0,
     },
     {
       id: 10,
-      title: "test 1",
+      title: "test 51",
       username: "test username 1",
       imgUrl: test3,
       stars: 0,
     },
     {
       id: 11,
-      title: "test 2",
+      title: "test 22",
       username: "test username 2",
       imgUrl: test4,
       stars: 2,
     },
     {
       id: 12,
-      title: "test 3",
+      title: "test42 3",
       username: "test username 3",
       imgUrl: test5,
       stars: 19,
     },
     {
       id: 13,
-      title: "test 4",
+      title: "test1 4",
       username: "test username 4",
       imgUrl: test4,
       stars: 24,
     },
     {
       id: 14,
-      title: "test 3",
+      title: "te5st 3",
       username: "test username 3",
       imgUrl: test2,
       stars: 11,
     },
     {
       id: 15,
-      title: "test 4",
+      title: "tes3t 4",
       username: "test username 4",
       imgUrl: test3,
       stars: 1,
     },
     {
       id: 16,
-      title: "test 5",
+      title: "tes56t 5",
       username: "test username 5",
       imgUrl: test1,
       stars: 49,
     },
     {
       id: 17,
-      title: "test 6",
+      title: "tes25t 6",
       username: "test username 6",
       imgUrl: test5,
       stars: 39,
     },
     {
       id: 18,
-      title: "test 7",
+      title: "testew 7",
       username: "test username 7",
       imgUrl: test3,
       stars: 22,
     },
     {
       id: 19,
-      title: "test 8",
+      title: "testf 8",
       username: "test username 8",
       imgUrl: test4,
       stars: 0,
     },
     {
       id: 20,
-      title: "test 1",
+      title: "tesg32t 1",
       username: "test username 1",
       imgUrl: test2,
       stars: 0,
     },
     {
       id: 21,
-      title: "test 2",
+      title: "testg23 2",
       username: "test username 2",
       imgUrl: test5,
       stars: 2,
@@ -304,7 +305,8 @@ export const Feed: React.FC<Props> = (props) => {
     },
   ];
   const [original] = useState([...test]);
-  const [array, setArray] = useState(test.splice(0, 30));
+  const [pairedDown, setPairedDown] = useState([...test]);
+  const [array, setArray] = useState(test.splice(0, 10));
   const [showLoadMore, setShowLoadMore] = useState(true);
 
   useEffect(() => {
@@ -314,21 +316,28 @@ export const Feed: React.FC<Props> = (props) => {
 
   useEffect(() => {
     if (props.searching === true) {
-      setArray(updateSearchQuery(array, props.searchQuery));
+      let searched = updateSearchQuery(original, props.searchQuery);
+      if (searched.length > 10) {
+        let spliced = searched.splice(0, 10);
+        setPairedDown(searched);
+        setArray(spliced);
+        props.modSearching();
+        setShowLoadMore(true);
+      } else setArray(searched);
     }
   }, [props.searchQuery]);
 
   useEffect(() => {
-    if (array.length === original.length) setShowLoadMore(false);
+    if (array.length === pairedDown.length) setShowLoadMore(false);
     else setShowLoadMore(true);
   }, [array]);
 
   function loadMore() {
-    setArray(loadMoreSet(array, original));
+    setArray(loadMoreSet(array, pairedDown));
   }
 
   function returnLoadButton() {
-    if (showLoadMore === true) {
+    if (showLoadMore === true && props.searching === false) {
       return <LoadMore loadMore={loadMore} />;
     } else return null;
   }
