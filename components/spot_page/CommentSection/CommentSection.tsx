@@ -8,6 +8,7 @@ type Comment = {
   text: string;
   stars: number;
   commentId: string;
+  timestamp: number;
 };
 
 interface Props {
@@ -21,6 +22,7 @@ export const CommentSection: React.FC<Props> = (props) => {
         <Comment
           username={el.username}
           userId={el.userId}
+          timestamp={el.timestamp}
           stars={el.stars}
           commentId={el.commentId}
           text={el.text}

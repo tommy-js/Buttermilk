@@ -1,6 +1,8 @@
 @import "../../globals/variables.scss";
 
 .comment {
+  padding: 5px;
+  box-sizing: border-box;
   border-bottom: 1px solid $red;
 }
 
@@ -20,4 +22,22 @@
 .img {
   width: 100%;
   height: 100%;
+}
+
+.username {
+  border-bottom: 1px solid transparent;
+  transition: 0.2s;
+}
+
+.username:hover {
+  border-bottom: 1px solid $red;
+  color: $red;
+  transition: 0.2s;
+}
+
+.timestamp {
+  display: inline-block;
+  margin-left: 15px;
+  color: grey;
+  font-size: 14px;
 }
