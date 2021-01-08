@@ -1,5 +1,6 @@
 import React from "react";
 import { Comment } from "../Comment/Comment";
+import styles from "./styles.module.scss";
 
 type Comment = {
   username: string;
@@ -15,9 +16,16 @@ interface Props {
 
 export const CommentSection: React.FC<Props> = (props) => {
   return (
-    <div>
+    <div className={styles.comment_section}>
       {props.comments.map((el: any) => (
-        <Comment text={el.text} key={el.commentId} />
+        <Comment
+          username={el.username}
+          userId={el.userId}
+          stars={el.stars}
+          commentId={el.commentId}
+          text={el.text}
+          key={el.commentId}
+        />
       ))}
     </div>
   );

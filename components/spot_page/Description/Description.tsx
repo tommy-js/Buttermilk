@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.scss";
 
 interface Props {
   description: string;
@@ -6,8 +7,9 @@ interface Props {
 
 export const Description: React.FC<Props> = (props) => {
   return (
-    <div>
-      <p>{props.description}</p>
+    <div className={styles.description}>
+      <h2 className={styles.header}>About</h2>
+      <p className={styles.text}>{props.description}</p>
     </div>
   );
 };

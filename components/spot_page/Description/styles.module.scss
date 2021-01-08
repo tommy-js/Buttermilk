@@ -1,0 +1,17 @@
+@import "../../globals/variables.scss";
+
+.description {
+  position: relative;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  font-size: 22px;
+  color: $red;
+}
+
+.text {
+  font-size: 18px;
+}

@@ -43,7 +43,12 @@ export const SpotPage: React.FC = () => {
   return (
     <div className={styles.spot_page}>
       <Image imgUrl={test.imgUrl} />
-      <Details title={test.title} username={test.username} stars={test.stars} />
+      <Details
+        title={test.title}
+        username={test.username}
+        userId={test.userId}
+        stars={test.stars}
+      />
       <Description description={test.description} />
       <CommentSection comments={test.comments} />
     </div>
