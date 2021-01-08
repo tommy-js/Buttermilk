@@ -528,7 +528,7 @@ export const Feed: React.FC<Props> = (props) => {
     },
   ];
   const [original] = useState([...test]);
-  const [array, setArray] = useState(test.splice(0, 15));
+  const [array, setArray] = useState(test.splice(0, 30));
   const [showLoadMore, setShowLoadMore] = useState(true);
 
   useEffect(() => {
