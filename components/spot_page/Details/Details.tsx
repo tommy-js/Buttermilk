@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { returnTimestamp } from "./index";
 import styles from "./styles.module.scss";
 
 const star = require("../../../public/star.png");
@@ -10,6 +11,7 @@ interface Props {
   username: string;
   userId: string;
   stars: number;
+  timestamp: number;
 }
 
 export const Details: React.FC<Props> = (props) => {
@@ -46,6 +48,7 @@ export const Details: React.FC<Props> = (props) => {
         <img className={styles.img} src={starImg} />
       </div>
       <p className={styles.stars}>{starVal}</p>
+      <p className={styles.timestamp}>{returnTimestamp(props.timestamp)}</p>
     </div>
   );
 };

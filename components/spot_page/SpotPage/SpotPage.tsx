@@ -15,6 +15,7 @@ export const SpotPage: React.FC = () => {
     stars: 33,
     description: "This is the test description",
     imgUrl: img,
+    timestamp: 1602495695,
     comments: [
       {
         username: "Ty",
@@ -51,6 +52,7 @@ export const SpotPage: React.FC = () => {
         username={test.username}
         userId={test.userId}
         stars={test.stars}
+        timestamp={test.timestamp}
       />
       <Description description={test.description} />
       <CommentSection comments={test.comments} />
