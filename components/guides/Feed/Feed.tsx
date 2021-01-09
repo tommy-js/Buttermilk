@@ -12,6 +12,7 @@ export const Feed: React.FC = () => {
       id: 0,
       title: "Bouldering in the snow",
       username: "James",
+      userId: "333",
       shortDesc: "Learn to boulder in the snow with this shortform guide.",
       timestamp: 1609972233,
       imgUrl: testimg4,
@@ -21,6 +22,7 @@ export const Feed: React.FC = () => {
       id: 1,
       title: "Skiing for noobs",
       username: "J22A",
+      userId: "3333rw",
       shortDesc: "Learn to boulder in the snow with this shortform guide.",
       timestamp: 1609972261,
       imgUrl: testimg,
@@ -30,6 +32,7 @@ export const Feed: React.FC = () => {
       id: 2,
       title: "Caving at its best",
       username: "Tommy",
+      userId: "v33da33",
       shortDesc: "Learn to boulder in the snow with this shortform guide.",
       timestamp: 1609972341,
       imgUrl: testimg2,
@@ -37,9 +40,10 @@ export const Feed: React.FC = () => {
     },
     {
       id: 3,
-      title: "Stepping into the unknown",
+      title: "Hiking for beginners",
       username: "Mac",
-      shortDesc: "Learn to boulder in the snow with this shortform guide.",
+      userId: "fea33",
+      shortDesc: "Get started hiking; don't let your nerves stop you!",
       timestamp: 1609972346,
       imgUrl: testimg2,
       stars: 8,
@@ -48,7 +52,8 @@ export const Feed: React.FC = () => {
       id: 4,
       title: "Bouldering in the Gunks",
       username: "Max",
-      shortDesc: "Learn to boulder in the snow with this shortform guide.",
+      userId: "f3a332222",
+      shortDesc: "Get out to your local crags and join in on the fun!",
       timestamp: 1609972352,
       imgUrl: testimg4,
       stars: 2,
@@ -57,7 +62,9 @@ export const Feed: React.FC = () => {
       id: 5,
       title: "Hiking the Appalacian Trail",
       username: "Karen",
-      shortDesc: "Learn to boulder in the snow with this shortform guide.",
+      userId: "bbrbrn",
+      shortDesc:
+        "Be prepared for your awesome adventure on the Appalacian Trail.",
       timestamp: 1609972012,
       imgUrl: testimg2,
       stars: 64,
@@ -66,25 +73,29 @@ export const Feed: React.FC = () => {
       id: 6,
       title: "Mountaineering",
       username: "Jord",
-      shortDesc: "Learn to boulder in the snow with this shortform guide.",
+      userId: "xcxcs",
+      shortDesc: "Embrace the more advanced art of mountaineering.",
       timestamp: 1609972365,
       imgUrl: testimg3,
       stars: 822,
     },
     {
       id: 7,
-      title: "Trees",
+      title: "Identify different stone",
       username: "44ew",
-      shortDesc: "Learn to boulder in the snow with this shortform guide.",
+      userId: "ngtb",
+      shortDesc:
+        "Know the differences between rock types to up your climbing game!",
       timestamp: 1609971245,
       imgUrl: testimg,
       stars: 83,
     },
     {
       id: 8,
-      title: "Something else",
+      title: "Backpacking on Your Own",
       username: "Tommy",
-      shortDesc: "Learn to boulder in the snow with this shortform guide.",
+      userId: "3kmdk",
+      shortDesc: "Read to learn how to be safe when heading out on your own",
       timestamp: 1609972384,
       imgUrl: testimg4,
       stars: 7,
@@ -98,6 +109,7 @@ export const Feed: React.FC = () => {
           id={el.id}
           title={el.title}
           username={el.username}
+          userId={el.userId}
           shortDesc={el.shortDesc}
           timestamp={el.timestamp}
           imgUrl={el.imgUrl}

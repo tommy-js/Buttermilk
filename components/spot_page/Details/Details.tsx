@@ -44,10 +44,10 @@ export const Details: React.FC<Props> = (props) => {
       <Link href={`/user/${props.userId}`}>
         <a className={styles.username}>{props.username}</a>
       </Link>
+      <p className={styles.stars}>{starVal}</p>
       <div className={styles.stars_img} onClick={() => modStar()}>
         <img className={styles.img} src={starImg} />
       </div>
-      <p className={styles.stars}>{starVal}</p>
       <p className={styles.timestamp}>{returnTimestamp(props.timestamp)}</p>
     </div>
   );
