@@ -1,5 +1,5 @@
-import { Navbar } from "../../components/navigation/Navbar/Navbar";
-import { SettingsPage } from "../../components/profile/SettingsPage/SettingsPage";
+import { Navbar } from "../../../components/navigation/Navbar/Navbar";
+import { SettingsPage } from "../../../components/profile/SettingsPage/SettingsPage";
 
 export default function Settings() {
   return (

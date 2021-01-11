@@ -1,7 +1,7 @@
 import React from "react";
 import { TopBar } from "../TopBar/TopBar";
 import { SideMenu } from "../SideMenu/SideMenu";
-import { Stats } from "../Stats/Stats";
+import { UserSpots } from "../UserSpots/UserSpots";
 import styles from "./styles.module.scss";
 
 export const SpotsPage: React.FC = () => {
@@ -9,7 +9,7 @@ export const SpotsPage: React.FC = () => {
     <div className={styles.profile_page}>
       <TopBar />
       <SideMenu />
-      <Stats />
+      <UserSpots />
     </div>
   );
 };

@@ -1,5 +1,5 @@
-import { Navbar } from "../../components/navigation/Navbar/Navbar";
-import { FollowersPage } from "../../components/profile/FollowersPage/FollowersPage";
+import { Navbar } from "../../../components/navigation/Navbar/Navbar";
+import { FollowersPage } from "../../../components/profile/FollowersPage/FollowersPage";
 
 export default function Followers() {
   return (
