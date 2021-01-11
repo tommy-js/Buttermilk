@@ -9,15 +9,16 @@ import {
 
 export const mapStateToProps = (state: any) => {
   return {
-    status: state.status,
     username: state.username,
+    userId: state.userId,
+    status: state.status,
+    timestamp: state.timestamp,
     stories: state.stories,
     guides: state.guides,
     spots: state.spots,
     following: state.following,
     followers: state.followers,
     starred: state.starred,
-    timestamp: state.timestamp,
   };
 };
 
@@ -27,6 +28,10 @@ export const mapDispatchToProps = (dispatch: any) => {
       dispatch({ type: "SET_STATUS", payload: status }),
     onUsernameSet: (username: string) =>
       dispatch({ type: "SET_USERNAME", payload: username }),
+    onUserIdSet: (userId: string) =>
+      dispatch({ type: "SET_USERID", payload: userId }),
+    onTimestampSet: (timestamp: number) =>
+      dispatch({ type: "SET_TIMESTAMP", payload: timestamp }),
     onStoriesSet: (stories: Story[]) =>
       dispatch({ type: "SET_STORIES", payload: stories }),
     onGuidesSet: (guides: Guide[]) =>
@@ -39,7 +44,5 @@ export const mapDispatchToProps = (dispatch: any) => {
       dispatch({ type: "SET_FOLLOWING", payload: following }),
     onStarredSet: (starred: Starred[]) =>
       dispatch({ type: "SET_STARRED", payload: starred }),
-    timestamp: (timestamp: number) =>
-      dispatch({ type: "SET_TIMESTAMP", payload: timestamp }),
   };
 };
