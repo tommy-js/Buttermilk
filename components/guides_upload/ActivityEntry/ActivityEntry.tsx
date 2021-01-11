@@ -3,8 +3,8 @@ import styles from "./styles.module.scss";
 
 export const ActivityEntry: React.FC = () => {
   return (
-    <div>
-      <h3>Activity</h3>
+    <div className={styles.activity_entry}>
+      <h3 className={styles.header}>Activity</h3>
       <select>
         <option>Rock Climbing</option>
       </select>

@@ -8,6 +8,7 @@ export const ImageUpload: React.FC = () => {
       <div className={styles.image_block}>
         <img className={styles.image} src={camera} />
       </div>
+      <button>Upload Image</button>
     </div>
   );
 };
