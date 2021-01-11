@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FeedItem } from "../feed_item/FeedItem/FeedItem";
 import { LoadMore } from "../LoadMore/LoadMore";
+import { RefreshNotification } from "../RefreshNotification/RefreshNotification";
 import {
   sortByRecent,
   sortByStars,
@@ -563,7 +564,7 @@ export const Feed: React.FC<Props> = (props) => {
   function returnLoadButton() {
     if (showLoadMore === true && props.searching === false) {
       return <LoadMore loadMore={loadMore} />;
-    } else return null;
+    } else return <RefreshNotification />;
   }
 
   return (

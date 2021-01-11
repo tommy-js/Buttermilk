@@ -16,7 +16,7 @@ interface Props {
 
 export const FeedItem: React.FC<Props> = (props) => {
   return (
-    <div className={styles.feed_item}>
+    <div className={styles.feed_item} key={props.id}>
       <div className={styles.inner}>
         <Image imgUrl={props.imgUrl} />
         <Details

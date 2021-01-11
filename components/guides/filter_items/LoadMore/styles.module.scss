@@ -1,0 +1,9 @@
+@import "../../../globals/variables.scss";
+
+.button {
+  @include standard_button;
+}
+
+.button:hover {
+  @include standard_hover;
+}
