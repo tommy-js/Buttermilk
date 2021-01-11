@@ -1,18 +1,11 @@
 @import "../../globals/variables.scss";
 
-.create_account_button {
-  margin-top: 225px;
-}
-
-.button_tag {
-  text-align: center;
-}
-
-.button {
+.create {
   @include standard_button;
+  margin-top: 25px;
   font-size: 14px;
 }
 
-.button:hover {
+.create:hover {
   @include standard_hover;
 }
