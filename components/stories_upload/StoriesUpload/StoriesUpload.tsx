@@ -3,7 +3,7 @@ import { Header } from "../Header/Header";
 import { ImageUpload } from "../ImageUpload/ImageUpload";
 import { ActivityType } from "../ActivityType/ActivityType";
 import { Text } from "../Text/Text";
-
+import { SubmitButton } from "../SubmitButton/SubmitButton";
 import styles from "./styles.module.scss";
 
 export const StoriesUpload: React.FC = () => {
@@ -13,6 +13,7 @@ export const StoriesUpload: React.FC = () => {
       <ImageUpload />
       <ActivityType />
       <Text />
+      <SubmitButton />
     </div>
   );
 };
