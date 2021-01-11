@@ -2,5 +2,5 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 export const Stats: React.FC = () => {
-  return <div>stats</div>;
+  return <div className={styles.stats}>stats</div>;
 };
