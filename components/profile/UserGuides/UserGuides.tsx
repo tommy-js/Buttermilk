@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 export const UserGuides: React.FC = () => {
   return (
-    <div>
+    <div className={styles.user_guides}>
       <p>Your guides</p>
     </div>
   );

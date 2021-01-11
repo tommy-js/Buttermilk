@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import styles from "./styles.module.scss";
 
 interface Props {
   path: string;
@@ -9,7 +10,7 @@ interface Props {
 export const MenuRoute: React.FC<Props> = (props) => {
   return (
     <Link href={props.path}>
-      <a>{props.text}</a>
+      <a className={styles.menu_route}>{props.text}</a>
     </Link>
   );
 };

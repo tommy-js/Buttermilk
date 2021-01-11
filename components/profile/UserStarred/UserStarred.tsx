@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 export const UserStarred: React.FC = () => {
   return (
-    <div>
+    <div className={styles.user_starred}>
       <p>Your starred</p>
     </div>
   );

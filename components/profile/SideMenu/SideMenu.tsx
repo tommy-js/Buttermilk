@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 export const SideMenu: React.FC = () => {
   return (
-    <div>
+    <div className={styles.side_menu}>
       <MenuRoute path="/profile/followers" text="Followers" />
       <MenuRoute path="/profile/following" text="Following" />
       <MenuRoute path="/profile/guides" text="Guides" />
