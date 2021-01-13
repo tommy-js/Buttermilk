@@ -26,6 +26,7 @@ const UserProfileState: React.FC<Redux> = (props) => {
     guides: [
       {
         title: "test1",
+        id: "001",
         imgUrl: test_img_2,
         timestamp: 2003332322,
       },
@@ -33,6 +34,7 @@ const UserProfileState: React.FC<Redux> = (props) => {
     spots: [
       {
         title: "test2",
+        id: "002",
         imgUrl: test_img_3,
         timestamp: 2002323322,
       },
@@ -40,6 +42,7 @@ const UserProfileState: React.FC<Redux> = (props) => {
     stories: [
       {
         title: "test3",
+        id: "003",
         imgUrl: test_img_4,
         timestamp: 2553003322,
       },

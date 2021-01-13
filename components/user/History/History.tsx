@@ -17,6 +17,7 @@ export const History: React.FC<Props> = (props) => {
       {props.spots.map((el: any) => (
         <HistorySpot
           title={el.title}
+          id={el.id}
           imgUrl={el.imgUrl}
           timestamp={el.timestamp}
         />
@@ -25,6 +26,7 @@ export const History: React.FC<Props> = (props) => {
       {props.stories.map((el: any) => (
         <HistoryStory
           title={el.title}
+          id={el.id}
           imgUrl={el.imgUrl}
           timestamp={el.timestamp}
         />
@@ -33,6 +35,7 @@ export const History: React.FC<Props> = (props) => {
       {props.guides.map((el: any) => (
         <HistoryGuide
           title={el.title}
+          id={el.id}
           imgUrl={el.imgUrl}
           timestamp={el.timestamp}
         />

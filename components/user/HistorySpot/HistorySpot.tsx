@@ -5,13 +5,14 @@ import styles from "./styles.module.scss";
 
 interface Props {
   title: string;
+  id: string;
   timestamp: number;
   imgUrl: string;
 }
 
 export const HistorySpot: React.FC<Props> = (props) => {
   return (
-    <Link href={`/story/${props.id}`} passHref>
+    <Link href={`/spots/${props.id}`} passHref>
       <HistoryLink
         imgUrl={props.imgUrl}
         title={props.title}

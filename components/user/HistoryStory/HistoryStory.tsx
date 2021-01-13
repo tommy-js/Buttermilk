@@ -12,7 +12,7 @@ interface Props {
 
 export const HistoryStory: React.FC<Props> = (props) => {
   return (
-    <Link href={`/story/${props.id}`} passHref>
+    <Link href={`/stories/${props.id}`} passHref>
       <HistoryLink
         imgUrl={props.imgUrl}
         title={props.title}
