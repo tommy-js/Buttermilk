@@ -7,7 +7,7 @@ interface Props {
 
 export const Description: React.FC<Props> = (props) => {
   return (
-    <div>
+    <div className={styles.bio}>
       <p>{props.description}</p>
     </div>
   );

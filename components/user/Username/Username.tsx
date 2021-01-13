@@ -6,5 +6,9 @@ interface Props {
 }
 
 export const Username: React.FC<Props> = (props) => {
-  return <h1>{props.username}</h1>;
+  return (
+    <div className={styles.username}>
+      <span className={styles.inner}>{props.username}</span>
+    </div>
+  );
 };

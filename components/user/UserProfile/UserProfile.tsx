@@ -9,6 +9,10 @@ import styles from "./styles.module.scss";
 
 const test_img = require("../../../public/test_img_2.jpg");
 
+const test_img_2 = require("../../../public/boulder1.jpg");
+const test_img_3 = require("../../../public/boulder2.jpg");
+const test_img_4 = require("../../../public/boulder3.jpg");
+
 interface Redux {
   status: boolean;
 }
@@ -22,16 +26,22 @@ const UserProfileState: React.FC<Redux> = (props) => {
     guides: [
       {
         title: "test1",
+        imgUrl: test_img_2,
+        timestamp: 2003332322,
       },
     ],
     spots: [
       {
         title: "test2",
+        imgUrl: test_img_3,
+        timestamp: 2002323322,
       },
     ],
     stories: [
       {
         title: "test3",
+        imgUrl: test_img_4,
+        timestamp: 2553003322,
       },
     ],
   };

@@ -12,18 +12,30 @@ interface Props {
 
 export const History: React.FC<Props> = (props) => {
   return (
-    <div>
-      <h3>Spots</h3>
+    <div className={styles.history}>
+      <h3 className={styles.header}>Spots</h3>
       {props.spots.map((el: any) => (
-        <HistorySpot title={el.title} />
+        <HistorySpot
+          title={el.title}
+          imgUrl={el.imgUrl}
+          timestamp={el.timestamp}
+        />
       ))}
-      <h3>Stories</h3>
+      <h3 className={styles.header}>Stories</h3>
       {props.stories.map((el: any) => (
-        <HistoryStory title={el.title} />
+        <HistoryStory
+          title={el.title}
+          imgUrl={el.imgUrl}
+          timestamp={el.timestamp}
+        />
       ))}
-      <h3>Guides</h3>
+      <h3 className={styles.header}>Guides</h3>
       {props.guides.map((el: any) => (
-        <HistoryGuide title={el.title} />
+        <HistoryGuide
+          title={el.title}
+          imgUrl={el.imgUrl}
+          timestamp={el.timestamp}
+        />
       ))}
     </div>
   );
