@@ -1,50 +1,44 @@
 @import "../../globals/variables.scss";
 
-.details {
+.description {
   position: relative;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+  // @include testing;
 }
 
 .title {
   font-size: 22px;
+  margin-left: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
+.lowerblock {
+  border-bottom: 1px dashed grey;
+}
+
+.stars,
+.timestamp,
 .username {
   display: inline-block;
-  margin-right: 15px;
-  border-bottom: 1px solid transparent;
-  transition: 0.2s;
+  margin-left: 15px;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.username:hover {
-  color: $red;
-  border-bottom: 1px solid $red;
-  transition: 0.2s;
-}
-
-.stars_img {
+.img_block {
+  position: relative;
+  top: 5px;
   display: inline-block;
   width: 25px;
   height: 25px;
-  overflow: hidden;
   cursor: pointer;
 }
 
 .img {
   width: 100%;
   height: 100%;
-}
-
-.stars {
-  display: inline-block;
-  margin-left: 5px;
-}
-
-.timestamp {
-  display: inline-block;
-  margin-left: 15px;
-  color: grey;
-  font-size: 14px;
 }

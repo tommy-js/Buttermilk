@@ -11,6 +11,7 @@ interface Text {
 
 interface Props {
   title: string;
+  id: string;
   username: string;
   userId: string;
   timestamp: number;
@@ -25,6 +26,7 @@ export const StoryPage: React.FC<Props> = (props) => {
       <Image imgUrl={props.imgUrl} />
       <Description
         title={props.title}
+        id={props.id}
         username={props.username}
         userId={props.userId}
         stars={props.stars}

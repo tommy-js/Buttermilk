@@ -5,57 +5,37 @@ import { Description } from "../Description/Description";
 import { CommentSection } from "../CommentSection/CommentSection";
 import styles from "./styles.module.scss";
 
-const img = require("../../../public/boulder1.jpg");
+interface Text {
+  text: string;
+  id: number;
+}
 
-export const SpotPage: React.FC = () => {
-  const test = {
-    title: "Boulder test spot",
-    username: "Tommy",
-    userId: "0",
-    stars: 33,
-    description: "This is the test description",
-    imgUrl: img,
-    timestamp: 1602495695,
-    comments: [
-      {
-        username: "Ty",
-        userId: "0",
-        text: "Testing comment 1",
-        timestamp: 1610149017,
-        stars: 2,
-        commentId: "22",
-      },
-      {
-        username: "fTy",
-        userId: "03",
-        text: "Testing comment 1",
-        timestamp: 1610149565,
-        stars: 26,
-        commentId: "3f21",
-      },
-      {
-        username: "Ty3",
-        userId: "0e2",
-        text: "Testing comment 1",
-        timestamp: 1610129017,
-        stars: 4,
-        commentId: "2112",
-      },
-    ],
-  };
+interface Props {
+  title: string;
+  id: string;
+  username: string;
+  userId: string;
+  description: string;
+  timestamp: number;
+  stars: number;
+  imgUrl: string;
+  text: Text[];
+  comments: any;
+}
 
+export const SpotPage: React.FC<Props> = (props) => {
   return (
     <div className={styles.spot_page}>
-      <Image imgUrl={test.imgUrl} />
-      <Details
-        title={test.title}
-        username={test.username}
-        userId={test.userId}
-        stars={test.stars}
-        timestamp={test.timestamp}
+      <Image imgUrl={props.imgUrl} />
+      <Description
+        title={props.title}
+        username={props.username}
+        id={props.id}
+        userId={props.userId}
+        stars={props.stars}
+        timestamp={props.timestamp}
       />
-      <Description description={test.description} />
-      <CommentSection comments={test.comments} />
+      <CommentSection comments={props.comments} />
     </div>
   );
 };
