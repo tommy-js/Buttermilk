@@ -1,6 +1,5 @@
 import React from "react";
 import { Image } from "../Image/Image";
-import { Details } from "../Details/Details";
 import { Description } from "../Description/Description";
 import { CommentSection } from "../CommentSection/CommentSection";
 import styles from "./styles.module.scss";

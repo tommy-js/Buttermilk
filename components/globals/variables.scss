@@ -38,3 +38,7 @@ $yellow: #f89d13;
   background-color: $red;
   transition: 0.2s;
 }
+
+@mixin standard_font {
+  font-family: "Nanum Gothic", sans-serif;
+}

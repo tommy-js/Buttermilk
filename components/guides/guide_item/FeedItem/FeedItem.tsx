@@ -33,7 +33,7 @@ export const FeedItem: React.FC<Props> = (props) => {
 const GuideLink = React.forwardRef(
   ({ onClick, href, imgUrl, title, username, stars }, ref) => {
     return (
-      <a href={href} onClick={onClick} ref={ref}>
+      <a className={styles.link} href={href} onClick={onClick} ref={ref}>
         <div className={styles.inner}>
           <Image imgUrl={imgUrl} />
           <Details title={title} username={username} stars={stars} />

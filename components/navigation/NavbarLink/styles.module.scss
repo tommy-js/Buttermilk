@@ -4,6 +4,9 @@
   margin-left: 15px;
   position: relative;
   display: inline-block;
+  text-decoration: none;
+  color: black;
+  @include standard_font;
 }
 
 .navbar_link:hover {
